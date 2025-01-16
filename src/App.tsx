@@ -70,7 +70,7 @@ function App() {
 								<a
 									key={section}
 									onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
-									className={`w-full lg:w-auto px-4 py-2 lg:text-center rounded capitalize ${
+									className={`w-full lg:w-auto px-4 py-2 text-center rounded capitalize ${
 										activeSection === section
 											? "text-yellow-300"
 											: " text-white hover:bg-gray-400"

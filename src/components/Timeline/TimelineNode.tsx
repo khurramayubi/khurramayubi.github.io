@@ -6,6 +6,7 @@ interface Props {
 	caption: string;
 	secondaryCaption?: string;
 	tertiaryCaption?: string;
+	link?: string;
 	smallCircleSize?: number;
 	bigCircleSize?: number;
 	extras?: ReactNode[];
@@ -17,6 +18,7 @@ function TimelineNode({
 	caption,
 	secondaryCaption,
 	tertiaryCaption,
+	link,
 	smallCircleSize = 20,
 	bigCircleSize = 50,
 	extras
@@ -55,7 +57,11 @@ function TimelineNode({
 						<h2 className="font-semibold text-gray-800">{title}</h2>
 						<p className="text-yellow-500 font-bold text-sm">{date}</p>
 						<p className="text-gray-600">{caption}</p>
-						{secondaryCaption && (
+						{secondaryCaption && link ? (
+							<a className="text-gray-600 italic" href={link}>
+								{secondaryCaption}
+							</a>
+						) : (
 							<p className="text-gray-600 italic">{secondaryCaption}</p>
 						)}
 						{extras && extras}

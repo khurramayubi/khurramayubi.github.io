@@ -1,10 +1,12 @@
 import EducationTimeline from "./ResumeTimelines/EducationTimeline";
+import ProjectTimeline from "./ResumeTimelines/ProjectTimeline";
 import WorkTimeline from "./ResumeTimelines/WorkTimeline";
 
 function Resume() {
 	return (
 		<>
-			<WorkTimeline></WorkTimeline>
+			<ProjectTimeline />
+			<WorkTimeline />
 			<EducationTimeline />
 		</>
 	);

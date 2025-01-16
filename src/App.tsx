@@ -72,11 +72,11 @@ function App() {
 									onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
 									className={`w-full lg:w-auto px-4 py-2 text-center rounded capitalize ${
 										activeSection === section
-											? "text-yellow-300"
-											: " text-white hover:bg-gray-400"
+											? "text-yellow-500"
+											: " text-white hover:text-yellow-500"
 									}`}
 								>
-									{section.replace(/_/g, " ")}
+									{section}
 								</a>
 							))}
 						</nav>

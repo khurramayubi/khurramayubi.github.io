@@ -3,7 +3,7 @@ import TimelineHeader from "../Timeline/TimelineHeader";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import TimelineNode from "../Timeline/TimelineNode";
 
-export default function Work() {
+export default function WorkTimeline() {
 	return (
 		<>
 			<Timeline

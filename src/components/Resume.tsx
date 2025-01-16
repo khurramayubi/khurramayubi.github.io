@@ -1,9 +1,11 @@
-import Work from "./ResumeTimelines/Work";
+import EducationTimeline from "./ResumeTimelines/EducationTimeline";
+import WorkTimeline from "./ResumeTimelines/WorkTimeline";
 
 function Resume() {
 	return (
 		<>
-			<Work></Work>
+			<WorkTimeline></WorkTimeline>
+			<EducationTimeline />
 		</>
 	);
 }

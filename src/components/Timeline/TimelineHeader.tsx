@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import RoundTile from "../RoundTile";
 
 interface Props {
 	icon: IconType;
@@ -13,12 +14,7 @@ function TimelineHeader({ icon: Icon, heading, bigCircleSize = 50 }: Props) {
 		<>
 			<div className="relative pb-8">
 				<div className="flex items-center">
-					<div
-						style={{ width: bigCircleSize, height: bigCircleSize }}
-						className="bg-[#1e1e1e] rounded-lg shadow-tile flex items-center justify-center"
-					>
-						<Icon className="text-yellow-500" size={25} />
-					</div>
+					<RoundTile icon={Icon} />
 					<div
 						style={{
 							left: lineLeft,

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import "./App.css";
-import reactIcon from "./assets/react.svg";
+import dp from "./assets/about-me/dp.jpeg";
 import Resume from "./components/Resume";
+import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import SocialTile from "./components/SocialTile";
+import SocialLinkIcon from "./components/SocialLinkIcon";
 
 function App() {
 	type SectionKey = "about" | "resume" | "projects" | "work";
@@ -16,25 +21,37 @@ function App() {
 		<>
 			<div className="flex flex-col lg:flex-row gap-6 p-4 mb-20 lg:mb-0">
 				{/* Left Column */}
-				<div className="lg:w-1/4 w-full bg-slate-100 p-4 rounded-lg shadow-md self-start">
+				<div className="lg:w-1/4 w-full bg-slate-100 p-4 rounded-lg shadow-md self-start place-items-center">
 					<img
-						src={reactIcon}
+						src={dp}
 						alt="Your Profile"
-						className="rounded-full w-32 h-32 mx-auto mb-4"
+						className="rounded-2xl w-32 h-32 mx-auto mb-4"
 					/>
-					<div className="text-center space-y-2">
-						<p className="font-bold">Khurram Butt</p>
-						<p className="text-sm">khurram.ayubi@yahoo.com</p>
-						<p className="text-sm">
-							<a
-								href="https://linkedin.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-blue-600 hover:underline"
-							>
-								LinkedIn Profile
-							</a>
-						</p>
+					<div className="space-y-2 text-center">
+						<h2 className="text-2xl font-bold">Khurram Ayubi Butt</h2>
+						<hr className="border-gray-800" />
+						<SocialTile
+							icon={IoMailOutline}
+							heading="Email"
+							text="khurram.ayubi@yahoo.com"
+						/>
+						<SocialTile
+							icon={IoLocationOutline}
+							heading="Location"
+							text="Niagara Falls"
+							subtext="Ontario, Canada"
+						/>
+						<SocialTile
+							icon={IoMailOutline}
+							heading="Email"
+							text="khurram.ayubi@yahoo.com"
+						/>
+						<div className="flex flex-row justify-evenly text-2xl py-4">
+							<SocialLinkIcon link="https://linkedin.com" icon={FaLinkedin} />
+							<SocialLinkIcon link="https://linkedin.com" icon={FaGithub} />
+							<SocialLinkIcon link="https://linkedin.com" icon={FaXTwitter} />
+							<SocialLinkIcon link="https://linkedin.com" icon={FaMedium} />
+						</div>
 					</div>
 				</div>
 				{/* Right Column */}
@@ -64,7 +81,7 @@ function App() {
 							))}
 						</nav>
 					</div>
-					<div className="pb-20 mb-20">{sections[activeSection]}</div>
+					<div className="">{sections[activeSection]}</div>
 				</div>
 			</div>
 		</>

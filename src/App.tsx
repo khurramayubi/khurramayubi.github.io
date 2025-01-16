@@ -59,18 +59,18 @@ function App() {
 					<div className="w-full flex flex-col lg:flex-row">
 						{/* Left Section of Right Column */}
 						<div className="flex-1 pr-6">
-							<h2 className="text-2xl font-bold mb-3 capitalize">
+							<h2 className="text-4xl font-bold mb-3 capitalize">
 								{activeSection}
 							</h2>
 							<div className="w-8 h-1 mb-12 bg-yellow-500"></div>
 						</div>
 						{/* Navbar */}
-						<nav className="lg:w-auto w-full bg-[#333333] flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl">
+						<nav className="lg:w-auto w-full bg-[#1e1e1e] shadow-tile z-10 flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl">
 							{Object.keys(sections).map((section) => (
 								<a
 									key={section}
 									onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
-									className={`w-full lg:w-auto px-4 py-2 text-left lg:text-center rounded capitalize ${
+									className={`w-full lg:w-auto px-4 py-2 lg:text-center rounded capitalize ${
 										activeSection === section
 											? "text-yellow-300"
 											: " text-white hover:bg-gray-400"

@@ -1059,6 +1059,10 @@ video {
   margin-bottom: 0;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1748,6 +1752,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:invisible {
+    visibility: hidden;
+  }
+
   .lg\:absolute {
     position: absolute;
   }
@@ -1808,6 +1816,18 @@ video {
     flex-direction: row;
   }
 
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
+  .lg\:flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+
   .lg\:gap-4 {
     gap: 1rem;
   }
@@ -1836,6 +1856,10 @@ video {
 
   .lg\:p-2 {
     padding: 0.5rem;
+  }
+
+  .lg\:pr-0 {
+    padding-right: 0px;
   }
 
   .lg\:text-center {

@@ -102,17 +102,20 @@ function App() {
 										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer ${
 											activeSection === section
 												? "text-white lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"
-												: " text-white hover:text-yellow-500"
+												: "text-white hover:text-yellow-500"
 										}`}
 									>
-										<div className="lg:hidden flex gap-1">
-											{activeSection === section && (
-												<p className="text-xs pr-2">{section}</p>
-											)}
-											<PhoneIcon className="block lg:hidden" />
-										</div>
-										<div className="hidden lg:block">
-											<p>{section}</p>
+										<div className="flex lg:flex-row-reverse gap-1">
+											<p
+												className={`text-xs pr-2 ${
+													activeSection === section
+														? "block"
+														: "hidden lg:block"
+												}  lg:block`}
+											>
+												{section}
+											</p>
+											<PhoneIcon className="block" />
 										</div>
 									</a>
 								);

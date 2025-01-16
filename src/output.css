@@ -615,6 +615,10 @@ video {
   height: 100%;
 }
 
+.h-2 {
+  height: 0.5rem;
+}
+
 .w-32 {
   width: 8rem;
 }
@@ -625,10 +629,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[2px\] {
-  width: 2px;
 }
 
 .flex-1 {
@@ -653,6 +653,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .gap-2 {
@@ -808,6 +812,11 @@ video {
   color: rgb(253 224 71 / var(--tw-text-opacity, 1));
 }
 
+.text-yellow-500 {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity, 1));
+}
+
 .shadow-\[0_0_3px_1px_rgba\(255\2c 193\2c 0\2c 0\.8\)\] {
   --tw-shadow: 0 0 3px 1px rgba(255,193,0,0.8);
   --tw-shadow-colored: 0 0 3px 1px var(--tw-shadow-color);
@@ -820,6 +829,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-line {
+  --tw-shadow: 0 0 4px 1px rgba(255,193,0,0.8);
+  --tw-shadow-colored: 0 0 4px 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -827,8 +842,14 @@ video {
 }
 
 .shadow-tile {
-  --tw-shadow: inset -1px -1px 6px #0b0b0b, inset 6px 6px 6px #2d2d2d;
-  --tw-shadow-colored: inset -1px -1px 6px var(--tw-shadow-color), inset 6px 6px 6px var(--tw-shadow-color);
+  --tw-shadow: inset -2px -2px 6px #0b0b0b, inset 6px 6px 6px #2d2d2d;
+  --tw-shadow-colored: inset -2px -2px 6px var(--tw-shadow-color), inset 6px 6px 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-circle {
+  --tw-shadow: 0 0 4px 2px rgba(255, 193, 0, 0.8);
+  --tw-shadow-colored: 0 0 4px 2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 

@@ -2,20 +2,46 @@ import { useState } from "react";
 import "./App.css";
 import dp from "./assets/about-me/dp.jpeg";
 import Resume from "./components/Resume";
-import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
+import {
+	IoChatbubbleOutline,
+	IoCodeSlashOutline,
+	IoDocumentTextOutline,
+	IoLocationOutline,
+	IoMailOutline,
+	IoPersonOutline
+} from "react-icons/io5";
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import SocialTile from "./components/SocialTile";
 import SocialLinkIcon from "./components/SocialLinkIcon";
+import { IconType } from "react-icons";
 
 function App() {
-	type SectionKey = "about" | "resume" | "projects" | "work";
-	const [activeSection, setActiveSection] = useState<SectionKey>("about");
-	const sections: { [key in SectionKey]: JSX.Element } = {
-		about: <div>About Me Content</div>,
-		resume: <Resume></Resume>,
-		projects: <div>Projects Content</div>,
-		work: <div>Work Experience Content</div>
+	type SectionKey = "About Me" | "CV" | "projects" | "blog";
+	const [activeSection, setActiveSection] = useState<SectionKey>("About Me");
+	interface sectionProps {
+		markup: JSX.Element;
+		phoneIcon: IconType;
+	}
+	const sections: {
+		[key in SectionKey]: sectionProps;
+	} = {
+		"About Me": {
+			markup: <div>About Me Content</div>,
+			phoneIcon: IoPersonOutline
+		},
+		CV: {
+			markup: <Resume></Resume>,
+			phoneIcon: IoDocumentTextOutline
+		},
+		projects: {
+			markup: <div>Projects Content</div>,
+			phoneIcon: IoCodeSlashOutline
+		},
+		blog: {
+			markup: <div>Work Experience Content</div>,
+			phoneIcon: IoChatbubbleOutline
+		}
 	};
 	return (
 		<>
@@ -65,23 +91,35 @@ function App() {
 							<div className="w-8 h-1 mb-12 bg-yellow-500"></div>
 						</div>
 						{/* Navbar */}
-						<nav className="lg:w-auto w-full bg-[#1e1e1e] shadow-tile z-10 flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl">
-							{Object.keys(sections).map((section) => (
-								<a
-									key={section}
-									onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
-									className={`w-full lg:w-auto px-4 py-2 text-center rounded capitalize ${
-										activeSection === section
-											? "text-yellow-500"
-											: " text-white hover:text-yellow-500"
-									}`}
-								>
-									{section}
-								</a>
-							))}
+						<nav className="lg:w-auto w-full bg-[#1e1e1e] shadow-tile z-10 flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl justify-center items-center">
+							{Object.keys(sections).map((section) => {
+								const typedSection = section as SectionKey;
+								const { phoneIcon: PhoneIcon } = sections[typedSection];
+								return (
+									<a
+										key={typedSection}
+										onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
+										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer ${
+											activeSection === section
+												? "text-white lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"
+												: " text-white hover:text-yellow-500"
+										}`}
+									>
+										<div className="lg:hidden flex gap-1">
+											{activeSection === section && (
+												<p className="text-xs pr-2">{section}</p>
+											)}
+											<PhoneIcon className="block lg:hidden" />
+										</div>
+										<div className="hidden lg:block">
+											<p>{section}</p>
+										</div>
+									</a>
+								);
+							})}
 						</nav>
 					</div>
-					<div className="">{sections[activeSection]}</div>
+					<div className="">{sections[activeSection].markup}</div>
 				</div>
 			</div>
 		</>

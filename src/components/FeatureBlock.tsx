@@ -15,6 +15,7 @@ export default function FeatureBlock({
 			<Icon size={50} className="text-yellow-500 shrink-0" />
 			<div>
 				<h5 className="text-xl font-bold pb-4">{heading}</h5>
+				<hr className="pb-4 border-yellow-500" />
 				<p>{description}</p>
 			</div>
 		</div>

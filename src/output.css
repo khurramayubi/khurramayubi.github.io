@@ -1365,6 +1365,16 @@ video {
   border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
 }
 
+.border-yellow-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 240 138 / var(--tw-border-opacity, 1));
+}
+
+.border-yellow-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
+}
+
 .border-opacity-50 {
   --tw-border-opacity: 0.5;
 }

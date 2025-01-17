@@ -5,7 +5,6 @@ import Resume from "./components/Resume";
 import {
 	IoChatbubbleOutline,
 	IoCodeSlashOutline,
-	IoDocumentTextOutline,
 	IoLocationOutline,
 	IoMailOutline,
 	IoPersonOutline
@@ -16,6 +15,7 @@ import SocialTile from "./components/SocialTile";
 import SocialLinkIcon from "./components/SocialLinkIcon";
 import { IconType } from "react-icons";
 import AboutMe from "./components/AboutMe";
+import { PiReadCvLogo } from "react-icons/pi";
 
 function App() {
 	type SectionKey = "About Me" | "CV" | "projects" | "blog";
@@ -33,7 +33,7 @@ function App() {
 		},
 		CV: {
 			markup: <Resume></Resume>,
-			phoneIcon: IoDocumentTextOutline
+			phoneIcon: PiReadCvLogo
 		},
 		projects: {
 			markup: <div>Projects Content</div>,

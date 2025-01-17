@@ -12,7 +12,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 	underlineColor = "bg-yellow-500"
 }) => {
 	return (
-		<div className={"flex-1 pr-6"}>
+		<div className={"flex-1 pr-6 pt-8"}>
 			<h2 className={`${size} font-extrabold mb-3 capitalize`}>{text}</h2>
 			<div className={`w-8 h-1 mb-8 ${underlineColor}`}></div>
 		</div>

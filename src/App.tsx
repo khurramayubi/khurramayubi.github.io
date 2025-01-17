@@ -123,7 +123,7 @@ function App() {
 														: "hidden lg:block"
 												}  lg:block`}
 											>
-												{section}
+												{sections[section].title}
 											</p>
 											<PhoneIcon className="block" />
 										</div>

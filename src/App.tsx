@@ -62,6 +62,10 @@ function App() {
 					/>
 					<div className="space-y-2 text-center">
 						<h2 className="text-2xl font-bold">Khurram Ayubi Butt</h2>
+						<blockquote className="italic text-sm">
+							“If You Cannot Do Great Things, Do Small Things in a Great Way” —
+							Napoleon Hill.
+						</blockquote>
 						<hr className="border-gray-800" />
 						<SocialTile
 							icon={IoMailOutline}

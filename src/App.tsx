@@ -3,7 +3,6 @@ import "./App.css";
 import dp from "./assets/about-me/dp.jpeg";
 import Resume from "./components/Resume";
 import {
-	IoChatbubbleOutline,
 	IoCodeSlashOutline,
 	IoLocationOutline,
 	IoMailOutline,
@@ -41,11 +40,6 @@ function App() {
 			title: "Projects",
 			markup: <div>Projects Content</div>,
 			phoneIcon: IoCodeSlashOutline
-		},
-		blog: {
-			title: "Blog",
-			markup: <div>Work Experience Content</div>,
-			phoneIcon: IoChatbubbleOutline
 		}
 	};
   const [activeSection, setActiveSection] =
@@ -84,10 +78,10 @@ function App() {
 							text="khurram.ayubi@yahoo.com"
 						/>
 						<div className="flex flex-row justify-evenly text-2xl py-4">
-							<SocialLinkIcon link="https://linkedin.com" icon={FaLinkedin} />
-							<SocialLinkIcon link="https://linkedin.com" icon={FaGithub} />
+							<SocialLinkIcon link="https://www.linkedin.com/in/kayubibutt/" icon={FaLinkedin} />
+							<SocialLinkIcon link="https://github.com/khurramayubi" icon={FaGithub} />
 							<SocialLinkIcon link="https://linkedin.com" icon={FaXTwitter} />
-							<SocialLinkIcon link="https://linkedin.com" icon={FaMedium} />
+							<SocialLinkIcon link="https://khurram-ayubi.medium.com/" icon={FaMedium} />
 						</div>
 						<div className="flex flex-col items-center justify-center gap-2">
 							<small className="flex items-center">
@@ -115,10 +109,10 @@ function App() {
 									<a
 										key={section}
 										onClick={() => setActiveSection(section)}
-										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer ${
+										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer text-white ${
 											activeSection === section
-												? "text-white lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"
-												: "text-white hover:text-yellow-500"
+												? " lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"
+												: " hover:text-yellow-500"
 										}`}
 									>
 										<div className="flex lg:flex-row-reverse gap-1">

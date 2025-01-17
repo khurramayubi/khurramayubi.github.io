@@ -34,6 +34,20 @@ export default function WorkTimeline() {
 								a spreadsheet. This initiative streamlined message creation,
 								leading to a 50% decrease in errors and a 30% improvement in
 								message consistency.
+							</blockquote>,
+							<blockquote>
+								Implemented a robust password lockout and account deletion
+								mechanism to align with Apple's stringent requirements. This
+								enhancement ensured enhanced security measures and adherence to
+								Apple's platform standards.
+							</blockquote>,
+							<blockquote>
+								Expanded Bluetooth integration capabilities by incorporating
+								support for blood pressure monitors and SpO2 readers using the
+								Validic SDK. This extension facilitated seamless logginƒg and
+								tracking of vital measurements saving users 40% of their time
+								per measurement, and enhancing the overall functionality of the
+								system.
 							</blockquote>
 						]}
 						tertiaryCaption="(NodeJs, MongoDB)"

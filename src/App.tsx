@@ -89,12 +89,17 @@ function App() {
 							<SocialLinkIcon link="https://linkedin.com" icon={FaXTwitter} />
 							<SocialLinkIcon link="https://linkedin.com" icon={FaMedium} />
 						</div>
-						<small className="flex items-center justify-evenly">
-							Made With <BsHeartFill className="text-red-500" /> using
-							<SiReact />
-							<SiTypescript />
-							<SiTailwindcss />
-						</small>
+						<div className="flex flex-col items-center justify-center gap-2">
+							<small className="flex items-center">
+								Made With
+								<BsHeartFill className="text-red-500 mx-2" />
+							</small>
+							<div className="flex gap-4">
+								<SiReact />
+								<SiTypescript />
+								<SiTailwindcss />
+							</div>
+						</div>
 					</div>
 				</div>
 				{/* Right Column */}

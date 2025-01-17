@@ -99,7 +99,7 @@ function App() {
 								return (
 									<a
 										key={typedSection}
-										onClick={() => setActiveSection(section as SectionKey)} // Cast section to SectionKey
+										onClick={() => setActiveSection(typedSection)}
 										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer ${
 											activeSection === section
 												? "text-white lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"

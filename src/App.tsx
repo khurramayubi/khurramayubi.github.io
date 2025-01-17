@@ -17,6 +17,8 @@ import { IconType } from "react-icons";
 import AboutMe from "./components/AboutMe";
 import { PiReadCvLogo } from "react-icons/pi";
 import SectionHeader from "./components/Section/SectionHeader";
+import { BsHeartFill } from "react-icons/bs";
+import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 function App() {
 	type SectionKey = "About Me" | "CV" | "projects" | "blog";
@@ -80,6 +82,12 @@ function App() {
 							<SocialLinkIcon link="https://linkedin.com" icon={FaXTwitter} />
 							<SocialLinkIcon link="https://linkedin.com" icon={FaMedium} />
 						</div>
+						<small className="flex items-center justify-evenly">
+							Made With <BsHeartFill className="text-red-500" /> using
+							<SiReact />
+							<SiTypescript />
+							<SiTailwindcss />
+						</small>
 					</div>
 				</div>
 				{/* Right Column */}

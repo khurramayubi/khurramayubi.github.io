@@ -5,6 +5,7 @@ import {
 	IoPhonePortraitOutline,
 	IoSettingsOutline
 } from "react-icons/io5";
+import SectionHeader from "./Section/SectionHeader";
 
 export default function AboutMe() {
 	return (
@@ -30,7 +31,7 @@ export default function AboutMe() {
 				</p>
 			</div>
 			<div>
-				<h3 className="text-3xl font-extrabold mb-3 capitalize">What I Do</h3>
+				<SectionHeader heading="What I Do" size="text-3xl" />
 				<div className="flex flex-col gap-2 items-center justify-center">
 					<div className="flex flex-col lg:flex-row  gap-2">
 						<FeatureBlock

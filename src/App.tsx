@@ -16,6 +16,7 @@ import SocialLinkIcon from "./components/SocialLinkIcon";
 import { IconType } from "react-icons";
 import AboutMe from "./components/AboutMe";
 import { PiReadCvLogo } from "react-icons/pi";
+import SectionHeader from "./components/Section/SectionHeader";
 
 function App() {
 	type SectionKey = "About Me" | "CV" | "projects" | "blog";
@@ -85,12 +86,7 @@ function App() {
 				<div className="lg:w-3/4 flex flex-col bg-slate-100 p-6 rounded-lg shadow-md relative">
 					<div className="w-full flex flex-col lg:flex-row">
 						{/* Left Section of Right Column */}
-						<div className="flex-1 pr-6">
-							<h2 className="text-4xl font-extrabold mb-3 capitalize">
-								{activeSection}
-							</h2>
-							<div className="w-8 h-1 mb-12 bg-yellow-500"></div>
-						</div>
+						<SectionHeader heading={activeSection} />
 						{/* Navbar */}
 						<nav className="lg:w-auto w-full bg-[#1e1e1e] shadow-tile z-10 flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl justify-center items-center">
 							{Object.keys(sections).map((section) => {

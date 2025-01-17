@@ -1177,11 +1177,19 @@ video {
   width: auto;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
 
 .flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.shrink-0 {
   flex-shrink: 0;
 }
 
@@ -1263,6 +1271,10 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1492,6 +1504,10 @@ video {
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1622,6 +1638,10 @@ video {
   font-weight: 600;
 }
 
+.font-extrabold {
+  font-weight: 800;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1726,6 +1746,11 @@ video {
   margin-bottom: 0px;
 }
 
+.prose-headings\:text-white :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .prose-p\:my-0 :is(:where(p):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -1810,6 +1835,10 @@ video {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:flex-row {

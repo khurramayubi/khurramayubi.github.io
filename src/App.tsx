@@ -15,6 +15,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import SocialTile from "./components/SocialTile";
 import SocialLinkIcon from "./components/SocialLinkIcon";
 import { IconType } from "react-icons";
+import AboutMe from "./components/AboutMe";
 
 function App() {
 	type SectionKey = "About Me" | "CV" | "projects" | "blog";
@@ -27,7 +28,7 @@ function App() {
 		[key in SectionKey]: sectionProps;
 	} = {
 		"About Me": {
-			markup: <div>About Me Content</div>,
+			markup: <AboutMe />,
 			phoneIcon: IoPersonOutline
 		},
 		CV: {
@@ -85,7 +86,7 @@ function App() {
 					<div className="w-full flex flex-col lg:flex-row">
 						{/* Left Section of Right Column */}
 						<div className="flex-1 pr-6">
-							<h2 className="text-4xl font-bold mb-3 capitalize">
+							<h2 className="text-4xl font-extrabold mb-3 capitalize">
 								{activeSection}
 							</h2>
 							<div className="w-8 h-1 mb-12 bg-yellow-500"></div>

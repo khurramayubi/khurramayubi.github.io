@@ -21,32 +21,35 @@ import { BsHeartFill } from "react-icons/bs";
 import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 function App() {
-	type SectionKey = "About Me" | "CV" | "projects" | "blog";
-	const [activeSection, setActiveSection] = useState<SectionKey>("About Me");
-	interface sectionProps {
+  interface SectionProps {
+		title: string;
 		markup: JSX.Element;
 		phoneIcon: IconType;
 	}
-	const sections: {
-		[key in SectionKey]: sectionProps;
-	} = {
-		"About Me": {
+	const sections: Record<string, SectionProps> = {
+		about: {
+			title: "About Me",
 			markup: <AboutMe />,
 			phoneIcon: IoPersonOutline
 		},
-		CV: {
+		cv: {
+			title: "Curriculum Vitae",
 			markup: <Resume></Resume>,
 			phoneIcon: PiReadCvLogo
 		},
 		projects: {
+			title: "Projects",
 			markup: <div>Projects Content</div>,
 			phoneIcon: IoCodeSlashOutline
 		},
 		blog: {
+			title: "Blog",
 			markup: <div>Work Experience Content</div>,
 			phoneIcon: IoChatbubbleOutline
 		}
 	};
+  const [activeSection, setActiveSection] =
+		useState<keyof typeof sections>("about");
 	return (
 		<>
 			<div className="flex flex-col lg:flex-row gap-6 p-4 mb-20 lg:mb-0">
@@ -94,16 +97,15 @@ function App() {
 				<div className="lg:w-3/4 flex flex-col bg-slate-100 p-6 rounded-lg shadow-md relative">
 					<div className="w-full flex flex-col lg:flex-row">
 						{/* Left Section of Right Column */}
-						<SectionHeader heading={activeSection} />
+						<SectionHeader heading={sections[activeSection].title} />
 						{/* Navbar */}
 						<nav className="lg:w-auto w-full bg-[#1e1e1e] shadow-tile z-10 flex gap-2 lg:gap-4 p-4 lg:p-2 border-t lg:border-t-0 border-gray-300 lg:absolute fixed lg:top-0 lg:right-12 lg:bottom-auto bottom-0 lg:left-auto left-0 lg:rounded-b-xl lg:rounded-t-none rounded-t-xl justify-center items-center">
 							{Object.keys(sections).map((section) => {
-								const typedSection = section as SectionKey;
-								const { phoneIcon: PhoneIcon } = sections[typedSection];
+								const { phoneIcon: PhoneIcon } = sections[section];
 								return (
 									<a
-										key={typedSection}
-										onClick={() => setActiveSection(typedSection)}
+										key={section}
+										onClick={() => setActiveSection(section)}
 										className={`w-auto px-4 py-2 text-center capitalize items-center justify-items-center border-yellow-500 border-2 lg:border-0 rounded-xl cursor-pointer ${
 											activeSection === section
 												? "text-white lg:text-yellow-500  border-opacity-80 bg-yellow-500 bg-opacity-80 lg:bg-transparent font-bold"

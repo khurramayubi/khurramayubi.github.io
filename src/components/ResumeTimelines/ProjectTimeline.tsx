@@ -3,6 +3,7 @@ import TimelineHeader from "../Timeline/TimelineHeader";
 import { IoCodeWorking } from "react-icons/io5";
 import TimelineNode from "../Timeline/TimelineNode";
 import examblitzPresentation from "../../assets/projects/examblitz/presentation.png";
+import thesis from "../../assets/projects/business-portfolio-optimization/undergrad_thesis.pdf";
 
 export default function ProjectTimeline() {
 	return (
@@ -18,7 +19,6 @@ export default function ProjectTimeline() {
 					<TimelineNode
 						title="ExamBlitZ"
 						date="2024"
-						caption="Create. Practice. Succeed."
 						link="https://examblitzs-site.webflow.io/"
 						secondaryCaption="View landing page"
 						extras={[
@@ -84,7 +84,107 @@ export default function ProjectTimeline() {
 								the visitors.
 							</blockquote>
 						]}
-						tertiaryCaption="(HTML, CSS, bootstrap 4, NodeJS, Java, Android Studio)"
+						tertiaryCaption="(HTML, CSS, bootstrap 4, NodeJs, Java, Android Studio)"
+					/>,
+					<TimelineNode
+						title="Sirat-Al-Mustaqeem"
+						date="2021"
+						caption="App"
+						tertiaryCaption="(React Native, NodeJs)"
+						extras={[
+							"Developed an engaging app tailored for Muslim users, offering randomized to-do lists with tasks of varying difficulty levels. Users progress through higher levels by successfully completing tasks, incorporating a gamified element into their task management experience.",
+							"Note: The backend for the app is currently incomplete, with some functionality still in development."
+						].map((desc) => (
+							<blockquote>{desc}</blockquote>
+						))}
+					/>,
+					<TimelineNode
+						title="Car Tracker"
+						date="2021"
+						caption="App"
+						tertiaryCaption="(React Native, NodeJs)"
+						extras={[
+							<blockquote>
+								Created a fun React Native app that enables users to quickly
+								look up government-issued vehicles by make, model, or license
+								plate number. The app’s backend, built with Node.js, efficiently
+								handles requests and queries the database to provide real-time
+								information.
+							</blockquote>
+						]}
+					/>,
+					<TimelineNode
+						title="SpotiLyrics"
+						date="2021"
+						caption="App"
+						tertiaryCaption="(React Native, NodeJs, Spotify API, lyrics.ovh API)"
+						extras={[
+							<blockquote>
+								Developed a simple single-page application (SPA) using React.js
+								that displays the lyrics of the currently playing song on
+								Spotify. The app allows users to search for songs and view the
+								lyrics of their liked tracks. The backend was forked from the
+								Spotify API examples repository, with minor adjustments made to
+								fit the app's functionality.
+							</blockquote>
+						]}
+					/>,
+					<TimelineNode
+						title="Chess Engine"
+						date="2018"
+						caption="App"
+						tertiaryCaption="(Java)"
+						extras={[
+							<blockquote>
+								Developed a console-based, ASCII-style chess engine in Java from
+								scratch, utilizing principles of artificial intelligence and
+								game theory. The engine was designed to search up to a ply depth
+								of 5, delivering reasonable performance within a short time
+								frame.
+							</blockquote>
+						]}
+					/>,
+					<TimelineNode
+						title="Business Portfolio Optimization"
+						date="2018"
+						caption="Paper"
+						secondaryCaption="Read the full paper"
+						link={thesis}
+						tertiaryCaption="(Python, R, LaTeX)"
+						extras={[
+							"Conducted research on the efficiency and accuracy of evolutionary algorithms in optimizing a multi-asset business portfolio with various constraints, aiming to identify the optimal portfolio. Leveraged Markowitz's Modern Portfolio Theory along with various AI techniques.",
+							"The study compared the performance of Genetic Algorithms (GA) and Particle Swarm Optimization (PSO) in finding the optimal portfolio."
+						].map((desc) => (
+							<blockquote>{desc}</blockquote>
+						))}
+					/>,
+					<TimelineNode
+						title="Story Reader/Editor"
+						secondaryCaption="Github Repo"
+						link="https://github.com/khurramayubi/choose-your-adventure-story-editor"
+						tertiaryCaption="(Python)"
+						extras={[
+							<blockquote>
+								Developed a command-line-based editor and reader for a "choose
+								your own adventure" story. The editor enables users to create
+								stories with multiple scenarios and branching choices, while the
+								reader allows users to engage with the story, making decisions
+								that influence the narrative path.
+							</blockquote>
+						]}
+					/>,
+					<TimelineNode
+						title="Content Management System"
+						date="2018"
+						tertiaryCaption="(HTML, CSS, PHP, JS, JQuery, psql)"
+						extras={[
+							<blockquote>
+								Developed a content management system (CMS) with a group of 8
+								students. The CMS allowed users to create simple websites from
+								scratch or from pre-existing templates using a simple drag and
+								drop mechanism.
+							</blockquote>
+						]}
 					/>
 				]}
 			></Timeline>

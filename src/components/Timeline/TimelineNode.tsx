@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 
 interface Props {
 	title: string;
-	date: string;
-	caption: string;
+	date?: string;
+	caption?: string;
 	secondaryCaption?: string;
 	tertiaryCaption?: string;
 	link?: string;
@@ -55,10 +55,17 @@ function TimelineNode({
 					</div>{" "}
 					<div className="prose prose-headings:my-0 prose-p:my-0 prose-blockquote:not-italic prose-blockquote:font-normal ms-6">
 						<h2 className="font-semibold text-gray-800">{title}</h2>
-						<p className="text-yellow-500 font-bold text-sm">{date}</p>
-						<p className="text-gray-600">{caption}</p>
+						{date && (
+							<p className="text-yellow-500 font-bold text-sm py-1">{date}</p>
+						)}
+						{caption && <p className="text-gray-600">{caption}</p>}
 						{secondaryCaption && link ? (
-							<a className="text-gray-600 italic" href={link}>
+							<a
+								className="text-gray-600 italic"
+								href={link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								{secondaryCaption}
 							</a>
 						) : (

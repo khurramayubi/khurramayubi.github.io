@@ -5,8 +5,8 @@ import WorkTimeline from "./ResumeTimelines/WorkTimeline";
 function Resume() {
 	return (
 		<>
-			<ProjectTimeline />
 			<WorkTimeline />
+			<ProjectTimeline />
 			<EducationTimeline />
 		</>
 	);

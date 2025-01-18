@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { motion } from "motion/react";
 
 interface Props {
 	link: string;
@@ -7,13 +8,15 @@ interface Props {
 
 export default function SocialLinkIcon({ link, icon: Icon }: Props) {
 	return (
-		<a
-			href={link}
-			target="_blank"
-			rel="noopener noreferrer"
+		<motion.div
+			initial={{ scaleX: 0, scaleY: 0 }}
+			whileInView={{ scaleX: 1, scaleY: 1 }}
+			transition={{ duration: 1.5, type: "spring" }}
 			className="hover:text-yellow-500"
 		>
-			<Icon />
-		</a>
+			<a href={link} target="_blank" rel="noopener noreferrer">
+				<Icon />
+			</a>
+		</motion.div>
 	);
 }

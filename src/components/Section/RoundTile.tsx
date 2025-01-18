@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { motion } from "motion/react";
 
 interface Props {
 	width?: number;
@@ -14,11 +15,17 @@ export default function RoundTile({
 	height = 50
 }: Props) {
 	return (
-		<div
-			style={{ width, height }}
-			className="bg-[#1e1e1e] rounded-2xl shadow-tile flex items-center justify-center"
+		<motion.div
+			initial={{ scaleX: 0, scaleY: 0 }}
+			whileInView={{ scaleX: 1, scaleY: 1 }}
+			transition={{ duration: 1.5, type: "spring" }}
 		>
-			<Icon className={iconColor} size={width / 2} />
-		</div>
+			<div
+				style={{ width, height }}
+				className="bg-[#1e1e1e] rounded-2xl shadow-tile flex items-center justify-center"
+			>
+				<Icon className={iconColor} size={width / 2} />
+			</div>
+		</motion.div>
 	);
 }

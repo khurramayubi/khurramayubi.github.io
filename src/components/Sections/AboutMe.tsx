@@ -15,30 +15,37 @@ import { SiFirebase, SiPostgresql } from "react-icons/si";
 import { FaCss3, FaHtml5, FaJava, FaNodeJs } from "react-icons/fa";
 import SectionCard from "../Section/SectionCard";
 import { BsAmazon } from "react-icons/bs";
+import { motion } from "motion/react";
 
 export default function AboutMe() {
 	return (
 		<>
-			<div className="prose">
-				<p>
-					Hi, I'm Khurram, a passionate coder who thrives on the thrill of
-					building and bringing ideas to life. Nothing energizes me more than
-					diving into a new project and seeing it evolve from concept to
-					creation. Software development isn’t just work for me—it’s a
-					fulfilling journey of constant learning and problem-solving that keeps
-					me motivated and excited.
-				</p>
-				<p>
-					When I’m not at my desk, you might find me behind a camera, capturing
-					the world through my lens. Photography offers me a fresh perspective,
-					and while I'm not the most artistic, it’s another way I explore
-					creativity in my own way.
-				</p>
-				<p>
-					I’m always curious, always learning, and always looking to take on new
-					challenges!
-				</p>
-			</div>
+			<motion.div
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+			>
+				<div className="prose">
+					<p>
+						Hi, I'm Khurram, a passionate coder who thrives on the thrill of
+						building and bringing ideas to life. Nothing energizes me more than
+						diving into a new project and seeing it evolve from concept to
+						creation. Software development isn’t just work for me—it’s a
+						fulfilling journey of constant learning and problem-solving that
+						keeps me motivated and excited.
+					</p>
+					<p>
+						When I’m not at my desk, you might find me behind a camera,
+						capturing the world through my lens. Photography offers me a fresh
+						perspective, and while I'm not the most artistic, it’s another way I
+						explore creativity in my own way.
+					</p>
+					<p>
+						I’m always curious, always learning, and always looking to take on
+						new challenges!
+					</p>
+				</div>
+			</motion.div>
 			<div>
 				<SectionHeader heading="What I Do" size="text-3xl" />
 				<div className="flex flex-col gap-2 items-center justify-center">

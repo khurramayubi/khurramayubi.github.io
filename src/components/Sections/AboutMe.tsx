@@ -44,6 +44,14 @@ export default function AboutMe() {
 						I’m always curious, always learning, and always looking to take on
 						new challenges!
 					</p>
+					<div className="flex gap-4">
+						<a className="py-3 px-6 bg-yellow-500 text-white rounded-xl decoration-transparent cursor-pointer">
+							Contact Me
+						</a>
+						<a className="py-3 px-6 bg-[#1e1e1e] border-2 text-white rounded-xl decoration-transparent cursor-pointer">
+							Download Resume
+						</a>
+					</div>
 				</div>
 			</motion.div>
 			<div>

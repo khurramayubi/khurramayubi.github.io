@@ -1,6 +1,6 @@
-import EducationTimeline from "./ResumeTimelines/EducationTimeline";
-import ProjectTimeline from "./ResumeTimelines/ProjectTimeline";
-import WorkTimeline from "./ResumeTimelines/WorkTimeline";
+import EducationTimeline from "../ResumeTimelines/EducationTimeline";
+import ProjectTimeline from "../ResumeTimelines/ProjectTimeline";
+import WorkTimeline from "../ResumeTimelines/WorkTimeline";
 
 function Resume() {
 	return (

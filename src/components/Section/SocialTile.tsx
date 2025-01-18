@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import RoundTile from "./Section/RoundTile";
+import RoundTile from "../Section/RoundTile";
 
 interface Props {
 	icon: IconType;

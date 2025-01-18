@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import dp from "./assets/about-me/dp.jpeg";
-import Resume from "./components/Resume";
+import Resume from "./components/Sections/Resume";
 import {
 	IoCodeSlashOutline,
 	IoLocationOutline,
@@ -10,10 +10,10 @@ import {
 } from "react-icons/io5";
 import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import SocialTile from "./components/SocialTile";
-import SocialLinkIcon from "./components/SocialLinkIcon";
+import SocialTile from "./components/Section/SocialTile";
+import SocialLinkIcon from "./components/Section/SocialLinkIcon";
 import { IconType } from "react-icons";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/Sections/AboutMe";
 import { PiReadCvLogo } from "react-icons/pi";
 import SectionHeader from "./components/Section/SectionHeader";
 import { BsHeartFill } from "react-icons/bs";

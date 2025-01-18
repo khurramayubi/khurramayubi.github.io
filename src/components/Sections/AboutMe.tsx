@@ -1,19 +1,19 @@
 import { CgWebsite } from "react-icons/cg";
-import FeatureBlock from "./FeatureBlock";
+import FeatureBlock from "../Section/FeatureBlock";
 import {
 	IoCameraOutline,
 	IoPhonePortraitOutline,
 	IoSettingsOutline
 } from "react-icons/io5";
-import SectionHeader from "./Section/SectionHeader";
-import examBlitzlogo from "../assets/projects/examblitz/logo.png";
-import mosqueaishaLogo from "../assets/projects/mosque-aisha/logo.png";
+import SectionHeader from "../Section/SectionHeader";
+import examBlitzlogo from "../../assets/projects/examblitz/logo.png";
+import mosqueaishaLogo from "../../assets/projects/mosque-aisha/logo.png";
 import { DiAppstore } from "react-icons/di";
 import { PiGooglePlayLogo } from "react-icons/pi";
 import { FaFlutter } from "react-icons/fa6";
 import { SiFirebase, SiPostgresql } from "react-icons/si";
 import { FaCss3, FaHtml5, FaJava, FaNodeJs } from "react-icons/fa";
-import SectionCard from "./Section/SectionCard";
+import SectionCard from "../Section/SectionCard";
 import { BsAmazon } from "react-icons/bs";
 
 export default function AboutMe() {

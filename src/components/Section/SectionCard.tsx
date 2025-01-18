@@ -45,7 +45,12 @@ export default function SectionCard({
 				<p>Links:</p>
 				{links.map(({ icon: Icon, link }, index: number) => {
 					return (
-						<a key={index} href={link}>
+						<a
+							key={index}
+							href={link}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<Icon className="hover:text-yellow-500" size={25} />
 						</a>
 					);

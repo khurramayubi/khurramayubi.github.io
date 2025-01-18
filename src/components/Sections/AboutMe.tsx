@@ -92,8 +92,11 @@ export default function AboutMe() {
 					imgSrc={examBlitzlogo}
 					techUsedIcons={[FaFlutter, SiFirebase, FaNodeJs]}
 					links={[
-						{ link: "", icon: CgWebsite },
-						{ link: "", icon: DiAppstore },
+						{ link: "https://examblitzs-site.webflow.io/", icon: CgWebsite },
+						{
+							link: "https://apps.apple.com/ca/app/examblitz/id6739375659",
+							icon: DiAppstore
+						},
 						{ link: "", icon: PiGooglePlayLogo }
 					]}
 					description="	ExamBlitz is an innovative platform designed to create tailored
@@ -106,10 +109,10 @@ export default function AboutMe() {
 					imgSrc={mosqueaishaLogo}
 					techUsedIcons={[FaHtml5, FaCss3, SiPostgresql, FaNodeJs, FaJava]}
 					links={[
-						{ link: "", icon: CgWebsite },
+						{ link: "https://mosqueaisha.ca/", icon: CgWebsite },
 						{ link: "", icon: BsAmazon }
 					]}
-					description="	ExamBlitz is an innovative platform designed to create tailored
+					description="ExamBlitz is an innovative platform designed to create tailored
 							exams for users based on their chosen topics. It combines
 							cutting-edge AI technology with user-friendly interfaces to offer
 							a comprehensive learning experience."

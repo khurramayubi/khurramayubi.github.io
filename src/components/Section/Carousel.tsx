@@ -32,7 +32,7 @@ export default function SectionCard({ images }: { images: string[] }) {
 					alt={`Slide ${currentIndex + 1}`}
 				/>
 			</div>
-			<div className="carousel-controls absolute bottom-8 right-12 flex gap-4">
+			<div className="carousel-controls absolute bottom-8 right-12 flex gap-4 items-center">
 				<button
 					className="h-[50px] w-[50px] bg-yellow-500 text-[#1e1e1e] font-extrabold rounded-full hover:bg-yellow-400 active:bg-yellow-600 transition duration-300"
 					onClick={handlePrev}
@@ -40,6 +40,7 @@ export default function SectionCard({ images }: { images: string[] }) {
 				>
 					&lt;
 				</button>
+				<p className="text-white">{`${currentIndex + 1} / ${images.length}`}</p>
 				<button
 					className="h-[50px] w-[50px] bg-yellow-500 text-[#1e1e1e] font-extrabold rounded-full hover:bg-yellow-400 active:bg-yellow-600 transition duration-300"
 					onClick={handleNext}

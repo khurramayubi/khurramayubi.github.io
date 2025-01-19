@@ -10,6 +10,7 @@ interface Props {
 		link: string;
 		icon: IconType;
 	}[];
+	onViewDetails?: () => void;
 }
 
 export default function SectionCard({
@@ -17,14 +18,15 @@ export default function SectionCard({
 	title,
 	description,
 	techUsedIcons,
-	links
+	links,
+	onViewDetails
 }: Props) {
 	return (
 		<motion.div
 			initial={{ scaleX: 0, scaleY: 0 }}
 			whileInView={{ scaleX: 1, scaleY: 1 }}
-			transition={{ duration: 3, type: "spring" }}
-			className="bg-[#1e1e1e] text-white rounded-xl p-8 flex gap-8 flex-col"
+			transition={{ duration: 2.5, type: "spring" }}
+			className="bg-[#1e1e1e] text-white rounded-xl px-8 py-4 flex gap-4 flex-col"
 		>
 			<div className="flex gap-8 items-center">
 				<img src={imgSrc} className="rounded-xl shrink-0 h-[75px] w-auto"></img>
@@ -56,6 +58,16 @@ export default function SectionCard({
 					);
 				})}
 			</div>
+			{onViewDetails && (
+				<div className="justify-end flex">
+					<button
+						className="hover:text-yellow-500 font-bold"
+						onClick={() => onViewDetails()}
+					>
+						View Details &gt;
+					</button>
+				</div>
+			)}
 		</motion.div>
 	);
 }

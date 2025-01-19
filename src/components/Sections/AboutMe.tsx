@@ -1,6 +1,7 @@
 import { CgWebsite } from "react-icons/cg";
 import FeatureBlock from "../Section/FeatureBlock";
 import {
+	IoApps,
 	IoCameraOutline,
 	IoPhonePortraitOutline,
 	IoSettingsOutline
@@ -17,7 +18,11 @@ import SectionCard from "../Section/SectionCard";
 import { BsAmazon } from "react-icons/bs";
 import { motion } from "motion/react";
 
-export default function AboutMe() {
+export default function AboutMe({
+	onViewAllProjects
+}: {
+	onViewAllProjects: () => void;
+}) {
 	return (
 		<>
 			<motion.div
@@ -45,12 +50,12 @@ export default function AboutMe() {
 						new challenges!
 					</p>
 					<div className="flex gap-4">
-						<a className="py-3 px-6 bg-yellow-500 text-white rounded-xl decoration-transparent cursor-pointer">
+						<button className="py-2 px-8 bg-yellow-500 text-white rounded-full">
 							Contact Me
-						</a>
-						<a className="py-3 px-6 bg-[#1e1e1e] border-2 text-white rounded-xl decoration-transparent cursor-pointer">
+						</button>
+						<button className="py-2 px-8 bg-[#1e1e1e] text-white rounded-full">
 							Download Resume
-						</a>
+						</button>
 					</div>
 				</div>
 			</motion.div>
@@ -125,6 +130,15 @@ export default function AboutMe() {
 							cutting-edge AI technology with user-friendly interfaces to offer
 							a comprehensive learning experience."
 				/>
+			</div>
+			<div className="flex justify-end cursor-pointer">
+				<div
+					onClick={onViewAllProjects}
+					className="flex items-center py-2 my-4 px-8 border-2 border-yellow-500 hover:bg-yellow-500 rounded-full hover:text-white gap-4"
+				>
+					<IoApps></IoApps>
+					<button>View all projects</button>
+				</div>
 			</div>
 		</>
 	);

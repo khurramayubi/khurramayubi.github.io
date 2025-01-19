@@ -18,6 +18,7 @@ import { PiReadCvLogo } from "react-icons/pi";
 import SectionHeader from "./components/Section/SectionHeader";
 import { BsHeartFill } from "react-icons/bs";
 import { SiReact, SiTailwindcss, SiTypescript } from "react-icons/si";
+import Projects from "./components/Sections/Projects";
 
 function App() {
 	interface SectionProps {
@@ -28,7 +29,9 @@ function App() {
 	const sections: Record<string, SectionProps> = {
 		about: {
 			title: "About Me",
-			markup: <AboutMe />,
+			markup: (
+				<AboutMe onViewAllProjects={() => setActiveSection("projects")} />
+			),
 			phoneIcon: IoPersonOutline
 		},
 		cv: {
@@ -38,7 +41,7 @@ function App() {
 		},
 		projects: {
 			title: "Projects",
-			markup: <div>Projects Content</div>,
+			markup: <Projects />,
 			phoneIcon: IoCodeSlashOutline
 		}
 	};

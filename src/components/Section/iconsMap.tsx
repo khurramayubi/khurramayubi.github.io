@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { BiBook } from "react-icons/bi";
 import { BsAmazon } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import {
@@ -8,7 +9,14 @@ import {
 	DiPython,
 	DiPhp
 } from "react-icons/di";
-import { FaNodeJs, FaHtml5, FaCss3, FaJava, FaRProject } from "react-icons/fa";
+import {
+	FaNodeJs,
+	FaHtml5,
+	FaCss3,
+	FaJava,
+	FaRProject,
+	FaGithub
+} from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import { PiGooglePlayLogo } from "react-icons/pi";
 import { SiFirebase, SiPostgresql } from "react-icons/si";
@@ -31,5 +39,7 @@ export const iconsMap: Record<string, { icon: IconType; alt: string }> = {
 	js: { icon: DiJavascript, alt: "Javascript" },
 	python: { icon: DiPython, alt: "Python" },
 	php: { icon: DiPhp, alt: "php" },
-	r: { icon: FaRProject, alt: "R" }
+	r: { icon: FaRProject, alt: "R" },
+	book: { icon: BiBook, alt: "Paper" },
+	github: { icon: FaGithub, alt: "Github Repo" }
 };

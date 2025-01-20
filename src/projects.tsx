@@ -1,7 +1,14 @@
 export const projects = {
 	examblitz: {
 		title: "ExamBlitZ",
-		images: ["/src/assets/projects/examblitz/logo.png"],
+		images: [
+			"/src/assets/projects/examblitz/screenshots/1.png",
+			"/src/assets/projects/examblitz/screenshots/2.png",
+			"/src/assets/projects/examblitz/screenshots/3.png",
+			"/src/assets/projects/examblitz/screenshots/4.png",
+			"/src/assets/projects/examblitz/screenshots/5.png",
+			"/src/assets/projects/examblitz/screenshots/6.png"
+		],
 		logo: "/src/assets/projects/examblitz/logo.png",
 		descs: [
 			<p>
@@ -25,7 +32,6 @@ export const projects = {
 	},
 	"mosque-aisha": {
 		title: "Mosque Aisha",
-		images: ["/src/assets/projects/examblitz/logo.png"],
 		logo: "/src/assets/projects/mosque-aisha/logo.png",
 		summary:
 			"Built a website and tools for my local mosque, including an API for admin functions and a smart TV app for displaying prayer times and news.",
@@ -81,6 +87,14 @@ export const projects = {
 	},
 	"sirat-al-mustaqeem": {
 		title: "Sirat-Al-Mustaqeem",
+		summary:
+			"React Native app offering Muslim randomized to-do lists with tasks of varying difficulties.",
+		images: [
+			"/src/assets/projects/sirat-al-mustaqeem/screenshots/1.png",
+			"/src/assets/projects/sirat-al-mustaqeem/screenshots/2.mp4",
+			"/src/assets/projects/sirat-al-mustaqeem/screenshots/3.png",
+			"/src/assets/projects/sirat-al-mustaqeem/screenshots/4.png"
+		],
 		techUsed: ["reactNative", "nodejs"],
 		descs: [
 			"Developed an engaging app tailored for Muslim users, offering randomized to-do lists with tasks of varying difficulty levels. Users progress through higher levels by successfully completing tasks, incorporating a gamified element into their task management experience.",
@@ -89,6 +103,15 @@ export const projects = {
 	},
 	"car-tracker": {
 		title: "Car Tracker",
+		summary:
+			"An app that enables users to quickly look up government-issued vehicles by make, model, or license plate number.",
+		images: [
+			"/src/assets/projects/car-tracker/screenshots/1.png",
+			"/src/assets/projects/car-tracker/screenshots/2.png",
+			"/src/assets/projects/car-tracker/screenshots/3.png",
+			"/src/assets/projects/car-tracker/screenshots/4.png",
+			"/src/assets/projects/car-tracker/screenshots/5.png"
+		],
 		date: "2021",
 		caption: "App",
 		techUsed: ["reactNative", "nodejs"],
@@ -103,6 +126,9 @@ export const projects = {
 	},
 	spotilyrics: {
 		title: "SpotiLyrics",
+		images: ["/src/assets/projects/spotilyrics/screenshots/1.mp4"],
+		summary:
+			"A react app to view the lyrics of currently playing and a user's liked songs from Spotify.",
 		date: "2021",
 		caption: "App",
 		techUsed: ["reactNative", "nodejs"],
@@ -118,6 +144,7 @@ export const projects = {
 	},
 	"chess-engine": {
 		title: "Chess Engine",
+		summary: "A console based, ASCII style chess engine.",
 		date: "2018",
 		caption: "App",
 		techUsed: ["java"],
@@ -132,6 +159,14 @@ export const projects = {
 	},
 	"portfolio-optimization": {
 		title: "Business Portfolio Optimization",
+		summary:
+			"Research paper on the efficiency and accuracy of evolutionary algorithms in optimizing a multi-asset business portfolio.",
+		links: [
+			{
+				link: "/src/assets/portfolio-optimization/thesis.pdf",
+				icon: "book"
+			}
+		],
 		date: "2018",
 		caption: "Paper",
 		techUsed: ["python", "r"],
@@ -142,6 +177,14 @@ export const projects = {
 	},
 	"story-editor": {
 		title: "Story Reader/Editor",
+		summary:
+			'Developed a command-line-based editor and reader for a "choose your own adventure" story.',
+		links: [
+			{
+				link: "https://github.com/khurramayubi/choose-your-adventure-story-editor",
+				icon: "github"
+			}
+		],
 		techUsed: ["python"],
 		descs: [
 			<p>

@@ -47,7 +47,7 @@ export default function SectionCard({
 						return (
 							<Icon
 								key={index}
-								size={15}
+								size={20}
 								className="text-yellow-500"
 								title={alt}
 							/>

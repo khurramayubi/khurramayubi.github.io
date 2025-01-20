@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import dp from "./assets/about-me/dp.jpeg";
 import Resume from "./components/Sections/Resume";
@@ -47,6 +47,9 @@ function App() {
 	};
 	const [activeSection, setActiveSection] =
 		useState<keyof typeof sections>("about");
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, [activeSection]);
 	return (
 		<>
 			<div className="flex flex-col lg:flex-row gap-6 p-4 mb-20 lg:mb-0">

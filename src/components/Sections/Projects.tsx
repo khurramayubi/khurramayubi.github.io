@@ -27,7 +27,7 @@ export default function Projects() {
 				</div>
 			)}
 			{!activeProject && (
-				<div className="grid grid-cols-2 gap-4">
+				<div className="grid lg:grid-cols-2 gap-4">
 					{Object.entries(projectsData).map(
 						([projectId, { title, logo, links, techUsed, summary }]) => {
 							return (

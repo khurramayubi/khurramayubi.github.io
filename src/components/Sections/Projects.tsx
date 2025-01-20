@@ -1,20 +1,7 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import SectionCard from "../Section/SectionCard";
 import Project from "./Project";
-import { projects } from "../../projects.tsx";
-
-const projectsData: Record<
-	string,
-	{
-		title: string;
-		descs: ReactNode[];
-		images?: string[];
-		logo?: string;
-		summary?: string;
-		techUsed: string[];
-		links?: { link: string; icon: string }[];
-	}
-> = projects;
+import { projectsData } from "../../projects.tsx";
 
 export default function Projects() {
 	const [activeProject, setActiveProject] = useState("");

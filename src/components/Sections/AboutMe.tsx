@@ -7,16 +7,20 @@ import {
 	IoSettingsOutline
 } from "react-icons/io5";
 import SectionHeader from "../Section/SectionHeader";
-import examBlitzlogo from "../../assets/projects/examblitz/logo.png";
-import mosqueaishaLogo from "../../assets/projects/mosque-aisha/logo.png";
 import SectionCard from "../Section/SectionCard";
 import { motion } from "motion/react";
+import { projectsData } from "../../projects.tsx";
 
 export default function AboutMe({
 	onViewAllProjects
 }: {
 	onViewAllProjects: () => void;
 }) {
+	const featuredProjects = [
+		projectsData["examblitz"],
+		projectsData["mosque-aisha"]
+	];
+
 	return (
 		<>
 			<motion.div
@@ -94,36 +98,17 @@ export default function AboutMe({
 			</div>
 			<SectionHeader heading="Featured Projects" />
 			<div className="flex flex-col lg:flex-row gap-8">
-				<SectionCard
-					title="ExamBlitZ"
-					imgSrc={examBlitzlogo}
-					techUsed={["flutter", "firebase", "nodejs"]}
-					links={[
-						{ link: "https://examblitzs-site.webflow.io/", icon: "website" },
-						{
-							link: "https://apps.apple.com/ca/app/examblitz/id6739375659",
-							icon: "apple"
-						},
-						{ link: "", icon: "google" }
-					]}
-					description="	ExamBlitz is an innovative platform designed to create tailored
-							exams for users based on their chosen topics. It combines
-							cutting-edge AI technology with user-friendly interfaces to offer
-							a comprehensive learning experience."
-				/>
-				<SectionCard
-					title="Mosque Aisha"
-					imgSrc={mosqueaishaLogo}
-					techUsed={["html", "css", "psql", "nodejs", "java"]}
-					links={[
-						{ link: "https://mosqueaisha.ca/", icon: "website" },
-						{ link: "", icon: "amazon" }
-					]}
-					description="ExamBlitz is an innovative platform designed to create tailored
-							exams for users based on their chosen topics. It combines
-							cutting-edge AI technology with user-friendly interfaces to offer
-							a comprehensive learning experience."
-				/>
+				{featuredProjects.map(({ title, summary, logo, techUsed, links }) => {
+					return (
+						<SectionCard
+							title={title}
+							imgSrc={logo}
+							techUsed={techUsed}
+							links={links}
+							description={summary}
+						/>
+					);
+				})}
 			</div>
 			<div className="flex justify-end cursor-pointer">
 				<div

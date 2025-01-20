@@ -1,4 +1,6 @@
-export const projects = {
+import { ReactNode } from "react";
+
+const projects = {
 	examblitz: {
 		title: "ExamBlitZ",
 		images: [
@@ -212,3 +214,16 @@ export const projects = {
 		]
 	}
 };
+
+export const projectsData: Record<
+	string,
+	{
+		title: string;
+		descs: ReactNode[];
+		images?: string[];
+		logo?: string;
+		summary?: string;
+		techUsed: string[];
+		links?: { link: string; icon: string }[];
+	}
+> = projects;

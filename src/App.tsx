@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import dp from "./assets/about-me/dp.jpeg";
+import dp from "/assets/about-me/dp.jpeg";
 import Resume from "./components/Sections/Resume";
 import {
 	IoCodeSlashOutline,

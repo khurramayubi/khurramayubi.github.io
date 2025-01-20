@@ -4,14 +4,14 @@ const projects = {
 	examblitz: {
 		title: "ExamBlitZ",
 		images: [
-			"/src/assets/projects/examblitz/screenshots/1.png",
-			"/src/assets/projects/examblitz/screenshots/2.png",
-			"/src/assets/projects/examblitz/screenshots/3.png",
-			"/src/assets/projects/examblitz/screenshots/4.png",
-			"/src/assets/projects/examblitz/screenshots/5.png",
-			"/src/assets/projects/examblitz/screenshots/6.png"
+			"/assets/projects/examblitz/screenshots/1.png",
+			"/assets/projects/examblitz/screenshots/2.png",
+			"/assets/projects/examblitz/screenshots/3.png",
+			"/assets/projects/examblitz/screenshots/4.png",
+			"/assets/projects/examblitz/screenshots/5.png",
+			"/assets/projects/examblitz/screenshots/6.png"
 		],
-		logo: "/src/assets/projects/examblitz/logo.png",
+		logo: "/assets/projects/examblitz/logo.png",
 		descs: [
 			<p>
 				Developed an exam preparation app that allows users to generate
@@ -37,7 +37,7 @@ const projects = {
 	},
 	"mosque-aisha": {
 		title: "Mosque Aisha",
-		logo: "/src/assets/projects/mosque-aisha/logo.png",
+		logo: "/assets/projects/mosque-aisha/logo.png",
 		summary:
 			"Built a website and tools for my local mosque, including an API for admin functions and a smart TV app for displaying prayer times and news.",
 		descs: [
@@ -95,10 +95,10 @@ const projects = {
 		summary:
 			"React Native app offering Muslim randomized to-do lists with tasks of varying difficulties.",
 		images: [
-			"/src/assets/projects/sirat-al-mustaqeem/screenshots/1.png",
-			"/src/assets/projects/sirat-al-mustaqeem/screenshots/2.mp4",
-			"/src/assets/projects/sirat-al-mustaqeem/screenshots/3.png",
-			"/src/assets/projects/sirat-al-mustaqeem/screenshots/4.png"
+			"/assets/projects/sirat-al-mustaqeem/screenshots/1.png",
+			"/assets/projects/sirat-al-mustaqeem/screenshots/2.mp4",
+			"/assets/projects/sirat-al-mustaqeem/screenshots/3.png",
+			"/assets/projects/sirat-al-mustaqeem/screenshots/4.png"
 		],
 		techUsed: ["reactNative", "nodejs"],
 		descs: [
@@ -111,11 +111,11 @@ const projects = {
 		summary:
 			"An app that enables users to quickly look up government-issued vehicles by make, model, or license plate number.",
 		images: [
-			"/src/assets/projects/car-tracker/screenshots/1.png",
-			"/src/assets/projects/car-tracker/screenshots/2.png",
-			"/src/assets/projects/car-tracker/screenshots/3.png",
-			"/src/assets/projects/car-tracker/screenshots/4.png",
-			"/src/assets/projects/car-tracker/screenshots/5.png"
+			"/assets/projects/car-tracker/screenshots/1.png",
+			"/assets/projects/car-tracker/screenshots/2.png",
+			"/assets/projects/car-tracker/screenshots/3.png",
+			"/assets/projects/car-tracker/screenshots/4.png",
+			"/assets/projects/car-tracker/screenshots/5.png"
 		],
 		date: "2021",
 		caption: "App",
@@ -131,7 +131,7 @@ const projects = {
 	},
 	spotilyrics: {
 		title: "SpotiLyrics",
-		images: ["/src/assets/projects/spotilyrics/screenshots/1.mp4"],
+		images: ["/assets/projects/spotilyrics/screenshots/1.mp4"],
 		summary:
 			"A react app to view the lyrics of currently playing and a user's liked songs from Spotify.",
 		date: "2021",
@@ -168,7 +168,7 @@ const projects = {
 			"Research paper on the efficiency and accuracy of evolutionary algorithms in optimizing a multi-asset business portfolio.",
 		links: [
 			{
-				link: "/src/assets/portfolio-optimization/thesis.pdf",
+				link: "/assets/portfolio-optimization/thesis.pdf",
 				icon: "book"
 			}
 		],

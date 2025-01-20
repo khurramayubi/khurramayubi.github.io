@@ -50,7 +50,7 @@ export default function AboutMe({
 						I’m always curious, always learning, and always looking to take on
 						new challenges!
 					</p>
-					<div className="flex gap-4">
+					<div className="flex flex-col lg:flex-row items-center gap-4">
 						<button className="flex items-center gap-2 py-2 px-8 bg-yellow-500 rounded-full">
 							<IoMailOutline className="text-white" />
 							<a

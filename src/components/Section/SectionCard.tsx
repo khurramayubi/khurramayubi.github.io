@@ -1,14 +1,47 @@
 import { IconType } from "react-icons";
 import { motion } from "motion/react";
+import { FaFlutter } from "react-icons/fa6";
+import { SiFirebase, SiPostgresql } from "react-icons/si";
+import { FaCss3, FaHtml5, FaJava, FaNodeJs, FaRProject } from "react-icons/fa";
+import { BsAmazon } from "react-icons/bs";
+import { CgWebsite } from "react-icons/cg";
+import {
+	DiAppstore,
+	DiJavascript,
+	DiJqueryLogo,
+	DiPhp,
+	DiPython
+} from "react-icons/di";
+import { PiGooglePlayLogo } from "react-icons/pi";
+import { TbBrandReactNative } from "react-icons/tb";
 
+const iconsMap: Record<string, { icon: IconType; alt: string }> = {
+	flutter: { icon: FaFlutter, alt: "Flutter" },
+	firebase: { icon: SiFirebase, alt: "Firebase" },
+	nodejs: { icon: FaNodeJs, alt: "NodeJs" },
+	html: { icon: FaHtml5, alt: "HTML" },
+	css: { icon: FaCss3, alt: "CSS" },
+	psql: { icon: SiPostgresql, alt: "PostgreSQL" },
+	java: { icon: FaJava, alt: "Java" },
+	google: { icon: PiGooglePlayLogo, alt: "Google Play Store" },
+	apple: { icon: DiAppstore, alt: "Apple iOS Store" },
+	website: { icon: CgWebsite, alt: "Website" },
+	amazon: { icon: BsAmazon, alt: "Amazon" },
+	reactNative: { icon: TbBrandReactNative, alt: "React Native" },
+	jquery: { icon: DiJqueryLogo, alt: "JQuery" },
+	js: { icon: DiJavascript, alt: "Javascript" },
+	python: { icon: DiPython, alt: "Python" },
+	php: { icon: DiPhp, alt: "php" },
+	r: { icon: FaRProject, alt: "R" }
+};
 interface Props {
-	imgSrc: string;
+	imgSrc?: string;
 	title: string;
-	description: string;
-	techUsedIcons: IconType[];
-	links: {
+	description?: string;
+	techUsed: string[];
+	links?: {
 		link: string;
-		icon: IconType;
+		icon: string;
 	}[];
 	onViewDetails?: () => void;
 }
@@ -17,7 +50,7 @@ export default function SectionCard({
 	imgSrc,
 	title,
 	description,
-	techUsedIcons,
+	techUsed,
 	links,
 	onViewDetails
 }: Props) {
@@ -29,35 +62,51 @@ export default function SectionCard({
 			className="bg-[#1e1e1e] text-white rounded-xl px-8 py-4 flex gap-4 flex-col"
 		>
 			<div className="flex gap-8 items-center">
-				<img src={imgSrc} className="rounded-xl shrink-0 h-[75px] w-auto"></img>
+				{imgSrc && (
+					<img
+						src={imgSrc}
+						className="rounded-xl shrink-0 h-[75px] w-auto"
+					></img>
+				)}
 				<div className="flex flex-col">
 					<h5 className="text-xl font-bold pb-4">{title}</h5>
 					<hr className=" border-yellow-500 w-8" />
 				</div>
 			</div>
-			<div>
+			<div className="flex-grow">
 				<div className="flex justify-start gap-4 mb-4">
-					{techUsedIcons.map((Icon, index) => (
-						<Icon key={index} size={15} className="text-yellow-500" />
-					))}
+					{techUsed.map((icon, index) => {
+						const { icon: Icon, alt } = iconsMap[icon];
+						return (
+							<Icon
+								key={index}
+								size={15}
+								className="text-yellow-500"
+								title={alt}
+							/>
+						);
+					})}
 				</div>
-				<p>{description}</p>
+				{description && <p>{description}</p>}
 			</div>
-			<div className="flex justify-end items-end gap-4">
-				<p>Links:</p>
-				{links.map(({ icon: Icon, link }, index: number) => {
-					return (
-						<a
-							key={index}
-							href={link}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Icon className="hover:text-yellow-500" size={25} />
-						</a>
-					);
-				})}
-			</div>
+			{links && links.length && (
+				<div className="flex justify-end items-end gap-4">
+					<p>Links:</p>
+					{links.map(({ icon, link }, index: number) => {
+						const { icon: Icon, alt } = iconsMap[icon];
+						return (
+							<a
+								key={index}
+								href={link}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon className="hover:text-yellow-500" size={25} title={alt} />
+							</a>
+						);
+					})}
+				</div>
+			)}
 			{onViewDetails && (
 				<div className="justify-end flex">
 					<button

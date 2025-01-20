@@ -9,13 +9,7 @@ import {
 import SectionHeader from "../Section/SectionHeader";
 import examBlitzlogo from "../../assets/projects/examblitz/logo.png";
 import mosqueaishaLogo from "../../assets/projects/mosque-aisha/logo.png";
-import { DiAppstore } from "react-icons/di";
-import { PiGooglePlayLogo } from "react-icons/pi";
-import { FaFlutter } from "react-icons/fa6";
-import { SiFirebase, SiPostgresql } from "react-icons/si";
-import { FaCss3, FaHtml5, FaJava, FaNodeJs } from "react-icons/fa";
 import SectionCard from "../Section/SectionCard";
-import { BsAmazon } from "react-icons/bs";
 import { motion } from "motion/react";
 
 export default function AboutMe({
@@ -103,14 +97,14 @@ export default function AboutMe({
 				<SectionCard
 					title="ExamBlitZ"
 					imgSrc={examBlitzlogo}
-					techUsedIcons={[FaFlutter, SiFirebase, FaNodeJs]}
+					techUsed={["flutter", "firebase", "nodejs"]}
 					links={[
-						{ link: "https://examblitzs-site.webflow.io/", icon: CgWebsite },
+						{ link: "https://examblitzs-site.webflow.io/", icon: "website" },
 						{
 							link: "https://apps.apple.com/ca/app/examblitz/id6739375659",
-							icon: DiAppstore
+							icon: "apple"
 						},
-						{ link: "", icon: PiGooglePlayLogo }
+						{ link: "", icon: "google" }
 					]}
 					description="	ExamBlitz is an innovative platform designed to create tailored
 							exams for users based on their chosen topics. It combines
@@ -120,10 +114,10 @@ export default function AboutMe({
 				<SectionCard
 					title="Mosque Aisha"
 					imgSrc={mosqueaishaLogo}
-					techUsedIcons={[FaHtml5, FaCss3, SiPostgresql, FaNodeJs, FaJava]}
+					techUsed={["html", "css", "psql", "nodejs", "java"]}
 					links={[
-						{ link: "https://mosqueaisha.ca/", icon: CgWebsite },
-						{ link: "", icon: BsAmazon }
+						{ link: "https://mosqueaisha.ca/", icon: "website" },
+						{ link: "", icon: "amazon" }
 					]}
 					description="ExamBlitz is an innovative platform designed to create tailored
 							exams for users based on their chosen topics. It combines

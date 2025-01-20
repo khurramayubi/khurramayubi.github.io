@@ -144,7 +144,7 @@ function App() {
 							})}
 						</nav>
 					</div>
-					<div className="">{sections[activeSection].markup}</div>
+					<div>{sections[activeSection].markup}</div>
 				</div>
 			</div>
 		</>

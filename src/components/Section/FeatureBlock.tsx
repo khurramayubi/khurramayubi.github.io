@@ -16,14 +16,17 @@ export default function FeatureBlock({
 			initial={{ scaleX: 0, scaleY: 0 }}
 			whileInView={{ scaleX: 1, scaleY: 1 }}
 			transition={{ duration: 3, type: "spring" }}
-			className="bg-[#1e1e1e] text-white rounded-xl p-8 flex gap-8 lg:w-1/2"
+			className="bg-[#1e1e1e] text-white rounded-xl p-8 flex flex-col gap-4 lg:w-1/2"
 		>
-			<Icon size={50} className="text-yellow-500 shrink-0" />
-			<div>
-				<h5 className="text-xl font-bold pb-4">{heading}</h5>
-				<hr className="pb-4 border-yellow-500 w-1/4" />
-				<p>{description}</p>
+			<div className="flex flex-row gap-4">
+				<Icon size={50} className="text-yellow-500 shrink-0" />
+				<div>
+					<h5 className="text-xl font-bold pb-4">{heading}</h5>
+					<hr className="pb-4 border-yellow-500 w-1/4" />
+				</div>
 			</div>
+
+			<p>{description}</p>
 		</motion.div>
 	);
 }

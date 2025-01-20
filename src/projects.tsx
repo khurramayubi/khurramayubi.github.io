@@ -26,7 +26,10 @@ export const projects = {
 				link: "https://apps.apple.com/ca/app/examblitz/id6739375659",
 				icon: "apple"
 			},
-			{ link: "", icon: "google" }
+			{
+				link: "https://play.google.com/store/apps/details?id=com.khurram.examBlitz&pcampaignid=web_share",
+				icon: "google"
+			}
 		],
 		techUsed: ["flutter", "firebase", "nodejs"]
 	},
@@ -77,11 +80,11 @@ export const projects = {
 			</p>
 		],
 		links: [
-			{ link: "https://mosqueaisha.ca/", icon: "website" },
-			{
-				link: "",
-				icon: "amazon"
-			}
+			{ link: "https://mosqueaisha.ca/", icon: "website" }
+			// {
+			// 	link: "",
+			// 	icon: "amazon"
+			// }
 		],
 		techUsed: ["html", "css", "psql", "nodejs", "java"]
 	},

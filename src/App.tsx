@@ -62,6 +62,9 @@ function App() {
 					/>
 					<div className="space-y-2 text-center">
 						<h2 className="text-2xl font-bold">Khurram Ayubi Butt</h2>
+						<div className="px-4 py-2 bg-[#1e1e1e] text-white place-self-center rounded-xl">
+							Software Developer
+						</div>
 						<blockquote className="italic text-sm">
 							“If You Cannot Do Great Things, Do Small Things in a Great Way” —
 							Napoleon Hill
@@ -77,11 +80,6 @@ function App() {
 							heading="Location"
 							text="Niagara Falls"
 							subtext="Ontario, Canada"
-						/>
-						<SocialTile
-							icon={IoMailOutline}
-							heading="Email"
-							text="khurram.ayubi@yahoo.com"
 						/>
 						<div className="flex flex-row justify-evenly text-2xl py-4">
 							<SocialLinkIcon

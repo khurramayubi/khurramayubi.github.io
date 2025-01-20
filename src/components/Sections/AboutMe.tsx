@@ -3,6 +3,7 @@ import FeatureBlock from "../Section/FeatureBlock";
 import {
 	IoApps,
 	IoCameraOutline,
+	IoMailOutline,
 	IoPhonePortraitOutline,
 	IoSettingsOutline
 } from "react-icons/io5";
@@ -10,6 +11,8 @@ import SectionHeader from "../Section/SectionHeader";
 import SectionCard from "../Section/SectionCard";
 import { motion } from "motion/react";
 import { projectsData } from "../../projects.tsx";
+import resume from "/assets/about-me/Khurram_Butt_Resume.pdf";
+import { PiReadCvLogo } from "react-icons/pi";
 
 export default function AboutMe({
 	onViewAllProjects
@@ -48,11 +51,20 @@ export default function AboutMe({
 						new challenges!
 					</p>
 					<div className="flex gap-4">
-						<button className="py-2 px-8 bg-yellow-500 text-white rounded-full">
-							Contact Me
+						<button className="flex items-center gap-2 py-2 px-8 bg-yellow-500 rounded-full">
+							<IoMailOutline className="text-white" />
+							<a
+								className="text-white decoration-transparent"
+								href="mailto:khurram.ayubi@yahoo.com"
+							>
+								Contact Me
+							</a>
 						</button>
-						<button className="py-2 px-8 bg-[#1e1e1e] text-white rounded-full">
-							Download Resume
+						<button className="flex items-center gap-2 py-2 px-8 bg-[#1e1e1e] rounded-full">
+							<PiReadCvLogo className="text-white" />
+							<a className="text-white decoration-transparent" href={resume}>
+								Download Resume
+							</a>
 						</button>
 					</div>
 				</div>

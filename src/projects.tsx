@@ -168,7 +168,7 @@ const projects = {
 			"Research paper on the efficiency and accuracy of evolutionary algorithms in optimizing a multi-asset business portfolio.",
 		links: [
 			{
-				link: "/assets/portfolio-optimization/thesis.pdf",
+				link: "/assets/projects/portfolio-optimization/thesis.pdf",
 				icon: "book"
 			}
 		],

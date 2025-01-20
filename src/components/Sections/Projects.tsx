@@ -35,6 +35,7 @@ export default function Projects() {
 						heading={projectsData[activeProject].title}
 						descs={projectsData[activeProject].descs}
 						imageList={projectsData[activeProject].images}
+						links={projectsData[activeProject].links}
 					/>
 				</div>
 			)}

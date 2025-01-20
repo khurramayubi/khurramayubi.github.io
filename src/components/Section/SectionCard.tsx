@@ -1,39 +1,6 @@
-import { IconType } from "react-icons";
 import { motion } from "motion/react";
-import { FaFlutter } from "react-icons/fa6";
-import { SiFirebase, SiPostgresql } from "react-icons/si";
-import { FaCss3, FaHtml5, FaJava, FaNodeJs, FaRProject } from "react-icons/fa";
-import { BsAmazon } from "react-icons/bs";
-import { CgWebsite } from "react-icons/cg";
-import {
-	DiAppstore,
-	DiJavascript,
-	DiJqueryLogo,
-	DiPhp,
-	DiPython
-} from "react-icons/di";
-import { PiGooglePlayLogo } from "react-icons/pi";
-import { TbBrandReactNative } from "react-icons/tb";
+import { iconsMap } from "./iconsMap";
 
-const iconsMap: Record<string, { icon: IconType; alt: string }> = {
-	flutter: { icon: FaFlutter, alt: "Flutter" },
-	firebase: { icon: SiFirebase, alt: "Firebase" },
-	nodejs: { icon: FaNodeJs, alt: "NodeJs" },
-	html: { icon: FaHtml5, alt: "HTML" },
-	css: { icon: FaCss3, alt: "CSS" },
-	psql: { icon: SiPostgresql, alt: "PostgreSQL" },
-	java: { icon: FaJava, alt: "Java" },
-	google: { icon: PiGooglePlayLogo, alt: "Google Play Store" },
-	apple: { icon: DiAppstore, alt: "Apple iOS Store" },
-	website: { icon: CgWebsite, alt: "Website" },
-	amazon: { icon: BsAmazon, alt: "Amazon" },
-	reactNative: { icon: TbBrandReactNative, alt: "React Native" },
-	jquery: { icon: DiJqueryLogo, alt: "JQuery" },
-	js: { icon: DiJavascript, alt: "Javascript" },
-	python: { icon: DiPython, alt: "Python" },
-	php: { icon: DiPhp, alt: "php" },
-	r: { icon: FaRProject, alt: "R" }
-};
 interface Props {
 	imgSrc?: string;
 	title: string;

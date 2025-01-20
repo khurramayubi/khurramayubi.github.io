@@ -90,7 +90,10 @@ function App() {
 								link="https://github.com/khurramayubi"
 								icon={FaGithub}
 							/>
-							<SocialLinkIcon link="https://linkedin.com" icon={FaXTwitter} />
+							<SocialLinkIcon
+								link="https://x.com/khurramayubib"
+								icon={FaXTwitter}
+							/>
 							<SocialLinkIcon
 								link="https://khurram-ayubi.medium.com/"
 								icon={FaMedium}

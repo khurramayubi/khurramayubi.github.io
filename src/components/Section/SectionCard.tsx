@@ -56,7 +56,7 @@ export default function SectionCard({
 				</div>
 				{description && <p>{description}</p>}
 			</div>
-			{links && links.length && (
+			{links && links.length ? (
 				<div className="flex justify-end items-end gap-4">
 					<p>Links:</p>
 					{links.map(({ icon, link }, index: number) => {
@@ -73,7 +73,7 @@ export default function SectionCard({
 						);
 					})}
 				</div>
-			)}
+			) : null}
 			{onViewDetails && (
 				<div className="justify-end flex">
 					<button

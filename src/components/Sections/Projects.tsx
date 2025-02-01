@@ -32,6 +32,7 @@ export default function Projects() {
 						([projectId, { title, logo, links, techUsed, summary }]) => {
 							return (
 								<SectionCard
+									key={projectId}
 									title={title}
 									imgSrc={logo}
 									techUsed={techUsed}

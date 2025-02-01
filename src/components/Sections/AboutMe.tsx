@@ -110,6 +110,7 @@ export default function AboutMe({
 				{featuredProjects.map(({ title, summary, logo, techUsed, links }) => {
 					return (
 						<SectionCard
+							key={title}
 							title={title}
 							imgSrc={logo}
 							techUsed={techUsed}

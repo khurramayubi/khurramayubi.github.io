@@ -35,6 +35,37 @@ const projects = {
 		],
 		techUsed: ["flutter", "firebase", "nodejs"]
 	},
+	designsnap: {
+		title: "Design Snap",
+		images: ["/assets/projects/designsnap/screenshots/1.mp4"],
+		logo: "/assets/projects/designsnap/logo.png",
+		descs: [
+			<>
+				<p>
+					Developed a design suggestion platform built with React, TypeScript,
+					Tailwind CSS and Vite, enabling users to compare and improve
+					decision-making through an interactive grid-based interface.
+				</p>
+				<p>
+					Developed a Node.js backend with Gemini API integration, implementing
+					retry logic for API stability.
+				</p>
+				<p>
+					Implemented a one-click style export feature, allowing users to copy
+					styles as a CSS stylesheet, with future expansion to Tailwind and
+					Flutter themes.
+				</p>
+				<p>
+					Optimized performance and responsiveness, ensuring smooth rendering of
+					design layouts across devices.
+				</p>
+			</>
+		],
+		summary:
+			"Design Snap is a AI powered platform allowing users to compare color schemes and font styles for an app idea.",
+		links: [],
+		techUsed: ["reactNative", "nodejs"]
+	},
 	"mosque-aisha": {
 		title: "Mosque Aisha",
 		logo: "/assets/projects/mosque-aisha/logo.png",

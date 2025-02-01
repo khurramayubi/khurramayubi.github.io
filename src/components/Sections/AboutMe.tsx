@@ -92,10 +92,7 @@ export default function AboutMe({
 					<div className="flex flex-col lg:flex-row  gap-2">
 						<FeatureBlock
 							heading="Photography"
-							description="I enjoy building web applications by working on both the front
-									end and back end. From creating user-friendly interfaces to
-									setting up functional back-end systems, I'm always excited to
-									learn and grow as a developer."
+							description="I enjoy photography and occasionally capture some great shots—mostly by accident. Once a year, I manage to take a couple that actually look intentional. The rest? Let’s just say they build character."
 							icon={IoCameraOutline}
 						/>
 						<FeatureBlock

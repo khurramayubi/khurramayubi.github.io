@@ -113,7 +113,7 @@ function App() {
 					</div>
 				</div>
 				{/* Right Column */}
-				<div className="lg:w-3/4 flex flex-col bg-slate-100 p-6 rounded-lg shadow-md relative">
+				<div className="lg:w-3/4 flex flex-col bg-slate-100 px-4 lg:px-6 py-6 rounded-lg shadow-md relative">
 					<div className="w-full flex flex-col lg:flex-row">
 						{/* Left Section of Right Column */}
 						<SectionHeader heading={sections[activeSection].title} />

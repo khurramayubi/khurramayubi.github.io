@@ -26,7 +26,7 @@ export default function SectionCard({
 			initial={{ scaleX: 0, scaleY: 0 }}
 			whileInView={{ scaleX: 1, scaleY: 1 }}
 			transition={{ duration: 2.5, type: "spring" }}
-			className="bg-[#1e1e1e] text-white rounded-xl px-8 py-4 flex gap-4 flex-col flex-1"
+			className="bg-[#1e1e1e] text-white rounded-xl px-5 lg:px-8 py-4 flex gap-4 flex-col flex-1"
 		>
 			<div className="flex gap-8 items-center">
 				{imgSrc && (

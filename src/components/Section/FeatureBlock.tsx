@@ -16,7 +16,7 @@ export default function FeatureBlock({
 			initial={{ scaleX: 0, scaleY: 0 }}
 			whileInView={{ scaleX: 1, scaleY: 1 }}
 			transition={{ duration: 3, type: "spring" }}
-			className="bg-[#1e1e1e] text-white rounded-xl p-8 flex flex-col gap-4 lg:w-1/2"
+			className="bg-[#1e1e1e] text-white rounded-xl py-8 px-5 lg:px-8 flex flex-col gap-4 lg:w-1/2"
 		>
 			<div className="flex flex-row gap-4">
 				<Icon size={50} className="text-yellow-500 shrink-0" />
